@@ -1,3 +1,21 @@
-h2#title Welcome to Ember.js
+header
+  .main-navbar
+    link-to 'main'classNames="logo" 
+      .emblem
+        span.first О
+        span.second О
+      p event-агенство
+
+    nav
+      link-to 'main'      | Главная
+      link-to 'tours'     | Экскурсии
+      link-to 'trainings' | Мастер-классы
+      link-to 'events'    | Праздники
+      link-to 'about'     | О нас
+
+    .action-buttons
+      .icon.contacts.mdi-communication-phone
+      .icon.cart.mdi-action-shopping-cart
+      .icon.profile.mdi-social-person
 
 == outlet

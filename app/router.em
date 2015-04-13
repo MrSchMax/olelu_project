@@ -3,11 +3,11 @@
 
 Router = Ember.Router.extend(location: config.locationType)
 Router.map ->
-  @route 'main'
+  @route 'main', path: '/'
   @route 'tours'
   @route 'trainings'
   @route 'events'
   @route 'about'
   return
-  
+
 `export default Router`

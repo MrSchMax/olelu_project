@@ -1,0 +1,71 @@
+@import 'reset'
+@import 'fonts/ptsans'
+@import 'fonts/roboto'
+@import 'fonts/baronneue'
+@import 'fonts/mdi'
+@import 'icons/mdi'
+
+*
+  box-sizing: border-box
+
+a
+  display: block
+  color: inherit
+  text-decoration: inherit
+  cursor: inherit
+  &:active, &:focus
+    outline: none;
+
+
+column()
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  justify-content: stretch
+
+row()
+  display: flex
+  flex-direction: row
+  align-items: stretch
+  justify-content: stretch
+
+// header
+
+header
+  background: #455A64
+
+// main-navbar
+.main-navbar
+  padding-left: 10px
+  padding-right: 10px
+
+// logo
+.logo
+  background: white
+  width: 120px
+  height: 80px
+  text-align: center
+  border-radius: 0px 0px 4px 4px;
+  font-family: 'PT Sans Narrow'
+  font-weight: bold
+  font-size: 18px;
+  color: #212121;
+  line-height: 1em;
+
+  .emblem
+    padding-top: 6px
+    font-family: 'Baron Neue'
+    font-weight: 900
+    font-size: 60px
+    line-height: 1em
+
+    .first
+      color: #43A047
+    .second
+      color: #FF5722
+  p
+    margin-top: -8px
+    color: #212121
+
+nav
+  row()
