@@ -5,6 +5,9 @@
 @import 'fonts/mdi'
 @import 'icons/mdi'
 
+$mdi
+  @import 'icons/mdi.styl'
+
 *
   box-sizing: border-box
 
@@ -27,7 +30,13 @@ row()
   display: flex
   flex-direction: row
   align-items: stretch
-  justify-content: stretch
+  justify-content: space-between
+
+content-center()
+  display: flex
+  // flex-direction: row
+  justify-content: center
+  align-items: center
 
 // header
 
@@ -69,3 +78,54 @@ header
 
 nav
   row()
+  max-width: 620px
+  margin-left: 5px
+  margin-right: 5px
+  font-family: 'PT Sans Narrow'
+  font-size: 24px
+  line-height: 1em
+  text-transform: uppercase
+  color: #CFD8DC
+
+  .active
+    font-weight: bold
+    color: white
+
+  a
+    margin-left: 5px
+    margin-right: 5px
+
+
+    &:hover
+      color: white
+
+.icon
+  width: 36px
+  height: 36px
+  content-center()
+
+  box-shadow: 1px 2px 4px 0px rgba(0,0,0,0.30);
+  border-radius: 100%;
+
+action-button(bg)
+  background: bg
+
+  &:active
+    background: darken(bg, 15%)
+
+.contacts
+  action-button: #43A047
+  mdi-communication-phone()
+
+  &:hover
+    mdi-notification-phone-in-talk()
+
+.cart
+  action-button: #FF5722
+  mdi-action-shopping-cart()
+
+  &:hover
+    mdi-action-add-shopping-cart()
+
+.profile
+  action-button: #2196F3

@@ -1,6 +1,6 @@
 header
   .main-navbar
-    link-to 'main'classNames="logo" 
+    link-to 'main'classNames="logo"
       .emblem
         span.first О
         span.second О
@@ -14,7 +14,7 @@ header
       link-to 'about'     | О нас
 
     .action-buttons
-      .icon.contacts.mdi-communication-phone
+      .icon.contacts
       .icon.cart.mdi-action-shopping-cart
       .icon.profile.mdi-social-person
 

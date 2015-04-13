@@ -6,7 +6,16 @@
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
 
-    /* Start Icons */
+mdi()
+  speak: none
+  font-family:'Material-Design-Icons'
+  font-size: 24px
+  line-height: 1em
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+/* Start Icons */
 
 
 .mdi-action-3d-rotation:before {
@@ -40,6 +49,11 @@
 .mdi-action-add-shopping-cart:before {
   content: "\e607";
 }
+
+mdi-action-add-shopping-cart()
+  mdi()
+  &:before
+    content: "\e607"
 
 .mdi-action-alarm-add:before {
   content: "\e608";
@@ -484,6 +498,11 @@
 .mdi-action-shopping-cart:before {
   content: "\e676";
 }
+
+mdi-action-shopping-cart()
+  mdi()
+  &:before
+    content: "\e676"
 
 .mdi-action-speaker-notes:before {
   content: "\e677";
@@ -977,6 +996,11 @@
 .mdi-communication-phone:before {
   content: "\e6f1";
 }
+
+mdi-communication-phone()
+  mdi()
+  &:before
+    content: "\e6f1";
 
 .mdi-communication-portable-wifi-off:before {
   content: "\e6f2";
@@ -2853,6 +2877,11 @@
 .mdi-notification-phone-in-talk:before {
   content: "\e8c4";
 }
+
+mdi-notification-phone-in-talk()
+  mdi()
+  &:before
+    content: "\e8c4"
 
 .mdi-notification-phone-locked:before {
   content: "\e8c5";
