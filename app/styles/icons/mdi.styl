@@ -15,8 +15,10 @@ mdi()
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-/* Start Icons */
+.mdi
+  mdi()
 
+/* Start Icons */
 
 .mdi-action-3d-rotation:before {
   content: "\e600";
@@ -51,7 +53,7 @@ mdi()
 }
 
 mdi-action-add-shopping-cart()
-  mdi()
+  @extend .mdi
   &:before
     content: "\e607"
 
@@ -500,7 +502,7 @@ mdi-action-add-shopping-cart()
 }
 
 mdi-action-shopping-cart()
-  mdi()
+  @extend .mdi
   &:before
     content: "\e676"
 
@@ -998,7 +1000,7 @@ mdi-action-shopping-cart()
 }
 
 mdi-communication-phone()
-  mdi()
+  @extend .mdi
   &:before
     content: "\e6f1";
 
@@ -2879,7 +2881,7 @@ mdi-communication-phone()
 }
 
 mdi-notification-phone-in-talk()
-  mdi()
+  @extend .mdi
   &:before
     content: "\e8c4"
 
@@ -3022,10 +3024,20 @@ mdi-notification-phone-in-talk()
 .mdi-social-person-outline:before {
   content: "\e8e7";
 }
+mdi-social-person-outline()
+  @extend .mdi
+  &:before
+    content: "\e8e7"
+
 
 .mdi-social-person:before {
   content: "\e8e8";
 }
+mdi-social-person()
+  @extend .mdi
+  &:before
+    content: "\e8e8"
+
 
 .mdi-social-plus-one:before {
   content: "\e8e9";

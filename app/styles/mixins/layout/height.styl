@@ -1,0 +1,144 @@
+pref-height(val = null)
+  if val != null && val != nil
+    height: val
+height-pref(val = null)
+  pref-height(val)
+
+min-height(val = null)
+  if val != null && val != nil
+    min-height: val
+height-min(val = null)
+  min-height(val)
+
+max-height(val = null)
+  if val != null && val != nil
+    max-height: val
+height-max(val = null)
+  max-height(val)
+
+fix-height(val = null)
+  if val != null && val != nil
+    height: val
+    min-height: val
+    max-height: val
+height-fix(val = null)
+  fix-height(val)
+
+minmax-height(min, max)
+  if min != null && min != nil
+    min-height: min
+  if max != null && max != nil
+    max-height: max
+height-minmax(min, max)
+  minmax-height(min, max)
+
+all-height(pref, min, max)
+  pref-height(pref)
+  min-height(min)
+  max-height(max)
+height-all(pref, min, max)
+  all-height(pref, min, max)
+
+
+// height(args..., pref = null, min = null, max = null, fix = null)
+//
+//   if pref != null || min != null || max != null || fix != null
+//     if fix != null and fix != nil
+//       fix-height(fix)
+//     else
+//       all-height(pref, min, max)
+//
+//   else if length(args) == 1
+//     pref-height(args[0])
+//
+//   else if length(args) == 2
+//     if args[1] == fix
+//       fix-height(args[0])
+//     else
+//       minmax-height(args[0], args[1])
+//
+//   else
+//     all-height(args[0], args[1], args[2])
+
+height(args..., pref = null, min = null, max = null)
+  if pref == null || min == null || max == null
+    if length(args) == 1
+      if length(args[0]) == 1
+        pref = args[0]
+      else
+        if length(args[0]) == 2
+          min = args[0][0]
+          max = args[0][1]
+        else
+          pref = args[0][0]
+          min  = args[0][1]
+          max  = args[0][2]
+    else if length(args) == 2
+      min = args[0]
+      max = args[1]
+    else
+      pref = args[0]
+      min = args[1]
+      max = args[2]
+  all-height(pref, min, max)
+// // pref-h
+// .h1
+//   height-pref: 10%
+// .h2
+//   pref-height: 10%
+//
+// // min-h
+// .h3
+//   height-min: 100px
+// .h4
+//   min-height: 100px
+//
+// // max-h
+// .h5
+//   height-max: 200px
+// .h6
+//   max-height: 200px
+//
+// // fix-h
+// .h7
+//   height-fix: 100px
+// .h8
+//   fix-height: 100px
+//
+// // min-h max-h
+// // min-h, max-h
+// .h9
+//   height-minmax: 100px 200px
+// .h10
+//   height-minmax: 100px, 200px
+// .h11
+//   minmax-height: 100px 200px
+// .h12
+//   minmax-height: 100px, 200px
+//
+//
+// // HASH  pref: pref-h, min: min-h, max: max-h, fix: fix-h
+// .h13
+//   height(pref: 10%, min: 10px, max: 100px, fix: 150px)
+//
+// // pref-h
+// .h14
+//   height: 10%
+//
+// // fix-h 'fix'
+// .h15
+//   height: 10% fix
+//
+// // min-h max-h
+// // min-h, max-h
+// .h16
+//   height: 10px 100px
+// .h17
+//   height: 10px, 100px
+//
+// // pref-h min-h max-h
+// // pref-h, min-h, max-h
+// .h18
+//   height: 10% 10px 100px
+// .h19
+//   height: 10%, 10px, 100px

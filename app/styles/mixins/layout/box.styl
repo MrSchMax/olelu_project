@@ -1,0 +1,52 @@
+@import 'width'
+@import 'height'
+@import 'constants'
+
+box(width = nil, height = nil, align = TL)
+  display: flex
+  flex-direction: row
+  // pos: $POS
+
+  if width in $POS
+    align = width
+    width = nil
+
+
+  if align in $POS-TL
+    justify-content: flex-start
+    align-items: flex-start
+
+  if align in $POS-TC
+    justify-content: center
+    align-items: flex-start
+
+  if align in $POS-TR
+    justify-content: flex-end
+    align-items: flex-start
+
+  if align in $POS-LC
+    justify-content: flex-start
+    align-items: center
+
+  if align in $POS-CC
+    justify-content: center
+    align-items: center
+
+  if align in $POS-RC
+    justify-content: flex-end
+    align-items: center
+
+  if align in $POS-BL
+    justify-content: flex-start
+    align-items: flex-end
+
+  if align in $POS-BC
+    justify-content: center
+    align-items: flex-end
+
+  if align in $POS-BR
+    justify-content: flex-end
+    align-items: flex-end
+
+  width(width)
+  height(height)

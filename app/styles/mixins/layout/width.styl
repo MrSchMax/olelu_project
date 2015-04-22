@@ -1,0 +1,150 @@
+pref-width(val = null)
+  if val != null && val != nil
+    width: val
+width-pref(val = null)
+  pref-width(val)
+
+min-width(val = null)
+  if val != null && val != nil
+    min-width: val
+width-min(val = null)
+  min-width(val)
+
+max-width(val = null)
+  if val != null && val != nil
+    max-width: val
+width-max(val = null)
+  max-width(val)
+
+fix-width(val = null)
+  if val != null && val != nil
+    width: val
+    min-width: val
+    max-width: val
+width-fix(val = null)
+  fix-width(val)
+
+minmax-width(min, max)
+  if min != null && min != nil
+    min-width: min
+  if max != null && max != nil
+    max-width: max
+width-minmax(min, max)
+  minmax-width(min, max)
+
+all-width(pref, min, max)
+  pref-width(pref)
+  min-width(min)
+  max-width(max)
+width-all(pref, min, max)
+  all-width(pref, min, max)
+
+
+// width(args..., pref = null, min = null, max = null, fix = null)
+//
+//   if pref != null || min != null || max != null || fix != null
+//     if fix != null and fix != nil
+//       fix-width(fix)
+//     else
+//       all-width(pref, min, max)
+//
+//   else if length(args) == 1
+//     pref-width(args[0])
+//
+//   else if length(args) == 2
+//     if args[1] == fix
+//       fix-width(args[0])
+//     else
+//       minmax-width(args[0], args[1])
+//
+//   else
+//     all-width(args[0], args[1], args[2])
+
+
+width(args..., pref = null, min = null, max = null)
+  if pref == null || min == null || max == null
+    if length(args) == 1
+      if length(args[0]) == 1
+        pref = args[0]
+      else
+        if length(args[0]) == 2
+          min = args[0][0]
+          max = args[0][1]
+        else
+          pref = args[0][0]
+          min  = args[0][1]
+          max  = args[0][2]
+    else if length(args) == 2
+      min = args[0]
+      max = args[1]
+    else
+      pref = args[0]
+      min = args[1]
+      max = args[2]
+  all-width(pref, min, max)
+
+
+
+
+// .wt1
+//   width(10px 40px 50px)
+// // pref-w
+// .w1
+//   width-pref: 10%
+// .w2
+//   pref-width: 10%
+//
+// // min-w
+// .w3
+//   width-min: 100px
+// .w4
+//   min-width: 100px
+//
+// // max-w
+// .w5
+//   width-max: 200px
+// .w6
+//   max-width: 200px
+//
+// // fix-w
+// .w7
+//   width-fix: 100px
+// .w8
+//   fix-width: 100px
+//
+// // min-w max-w
+// // min-w, max-w
+// .w9
+//   width-minmax: 100px 200px
+// .w10
+//   width-minmax: 100px, 200px
+// .w11
+//   minmax-width: 100px 200px
+// .w12
+//   minmax-width: 100px, 200px
+//
+// // HASH  pref: pref-w, min: min-w, max: max-w, fix: fix-w
+// .w13
+//   width(pref: 10%, min: 10px, max: 100px, fix: 150px)
+//
+// // pref-w
+// .w14
+//   width: 10%
+//
+// // fix-w 'fix'
+// .w15
+//   width: 10% fix
+//
+// // min-w max-w
+// // min-w, max-w
+// .w16
+//   width: 10px 100px
+// .w17
+//   width: 10px, 100px
+//
+// // pref-w min-w max-w
+// // pref-w, min-w, max-w
+// .w18
+//   width: 10% 10px 100px
+// .w19
+//   width: 10%, 10px, 100px

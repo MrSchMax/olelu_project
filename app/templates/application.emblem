@@ -15,7 +15,7 @@ header
 
     .action-buttons
       .icon.contacts
-      .icon.cart.mdi-action-shopping-cart
-      .icon.profile.mdi-social-person
+      .icon.cart
+      .icon.profile
 
 == outlet

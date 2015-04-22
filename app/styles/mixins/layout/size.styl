@@ -1,0 +1,155 @@
+@import 'width'
+@import 'height'
+
+pref-size(w, h = null)
+  pref-width(w)
+
+  pref-height(w) if h == null
+  pref-height(h) if h != null
+
+size-pref(w, h = null)
+  pref-size(w, h)
+
+
+min-size(w, h = null)
+  min-width(w)
+
+  min-height(w) if h == null
+  min-height(h) if h != null
+
+size-min(w, h = null)
+  min-size(w, h)
+
+
+max-size(w, h = null)
+  max-width(w)
+
+  max-height(w) if h == null
+  max-height(h) if h != null
+
+size-max(w, h = null)
+  max-size(w, h)
+
+
+
+fix-size(w, h = null)
+  fix-width(w)
+
+  fix-height(w) if h == null
+  fix-height(h) if h != null
+
+size-fix(w, h = null)
+  fix-size(w, h)
+
+
+minmax-size(min, max)
+  min-size(min[0], min[1])
+  max-size(max[0], max[1])
+
+size-minmax(min, max)
+  minmax-size(min, max)
+
+all-size(pref = null, min = null, max = null)
+  pref-size(pref[0], pref[1])
+  min-size(min[0], min[1])
+  max-size(max[0], max[1])
+
+
+size(args..., pref = null, min = null, max = null, fix = null)
+
+  if pref != null || min != null || max != null || fix != null
+
+    if fix != null and fix != nil
+      fix-size(fix[0], fix[1])
+    else
+      all-size(pref, min, max)
+
+
+  else if list-separator(args) == ' '
+
+    if fix in args
+      if length(args) == 2
+        fix-size(args[0])
+      else
+        fix-size(args[0], args[1])
+    else
+      pref-size(args[0], args[1])
+
+  else
+    if length(args) == 2
+      minmax-size(args[0], args[1])
+    else
+      all-size(args[0], args[1], args[2])
+
+//
+// // pref-w [pref-h]
+// // pref-w, [pref-h]
+// .z1
+//   pref-size: 10% 20%
+// .z2
+//   pref-size: 10%, 20%
+// .z3
+//   size-pref: 10% 20%
+// .z4
+//   size-pref: 10%, 20%
+//
+// // min-w [min-h]
+// // min-w, [min-h]
+// .z5
+//   min-size: 50px 150px
+// .z6
+//   min-size: 50px, 150px
+// .z7
+//   size-min: 50px 150px
+// .z8
+//   size-min: 50px, 150px
+//
+// // max-w [max-h]
+// // max-w, [max-h]
+// .z9
+//   max-size: 100px 200px
+// .z10
+//   max-size: 100px, 200px
+// .z11
+//   size-max: 100px 200px
+// .z12
+//   size-max: 100px, 200px
+//
+// // fix-w [fix-h]
+// // fix-w, [fix-h]
+// .z13
+//   fix-size: 200px 400px
+// .z14
+//   fix-size: 200px, 400px
+// .z15
+//   size-fix: 200px 400px
+// .z16
+//   size-fix: 200px, 400px
+//
+// // min-w [min-h], max-w [max-h]
+// .z17
+//   minmax-size: 50px 150px, 100px 200px
+// .z18
+//   size-minmax: 50px 150px, 100px 200px
+//
+// // pref-w [pref-h]
+// .z19
+//   size: 10% 20%
+//
+// // pref-w [pref-h] 'fix'
+// .z20
+//   size: 100px 200px fix
+//
+// // min-w [min-h], max-w [max-h]
+// .z21
+//   size: 10% 20%, 100px 200px
+//
+// // pref-w [pref-h], min-w [min-h], max-w [max-h]
+// .z22
+//   size: 10% 20%, 50px 150px, 100px 200px
+//
+// // pref: pref-w [pref-h], min: min-w [min-h], max: max-w [max-h], fix: fix-w [fix-h]
+// .z23
+//   size(pref: 10% 20%, min: 50px 150px, max: 100px 200px, fix: 200px 400px)
+// .z24
+//   size(pref: 10% 20%, min: 50px 150px, max: 100px 200px, fix: nil)

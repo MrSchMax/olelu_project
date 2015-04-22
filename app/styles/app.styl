@@ -29,8 +29,8 @@ column()
 row()
   display: flex
   flex-direction: row
-  align-items: stretch
-  justify-content: space-between
+  // align-items: center
+  // justify-content: space-between
 
 content-center()
   display: flex
@@ -41,12 +41,14 @@ content-center()
 // header
 
 header
-  background: #455A64
+  background: #E64A19
 
 // main-navbar
 .main-navbar
   padding-left: 10px
   padding-right: 10px
+  row()
+  flex-grow: 1
 
 // logo
 .logo
@@ -78,14 +80,15 @@ header
 
 nav
   row()
-  max-width: 620px
+  // max-width: 620px
+  flex-basis: 620px
   margin-left: 5px
   margin-right: 5px
   font-family: 'PT Sans Narrow'
   font-size: 24px
   line-height: 1em
   text-transform: uppercase
-  color: #CFD8DC
+  color: #FFCCBC
 
   .active
     font-weight: bold
@@ -102,10 +105,19 @@ nav
 .icon
   width: 36px
   height: 36px
+  padding-left: 5px
+  padding-right: 5px
   content-center()
 
-  box-shadow: 1px 2px 4px 0px rgba(0,0,0,0.30);
-  border-radius: 100%;
+  box-shadow: 1px 2px 4px 0px rgba(0,0,0,0.30)
+  border-radius: 100%
+
+  color: white
+
+.action-buttons
+  row()
+  // max-width: 150px
+  flex: 1 1 150px
 
 action-button(bg)
   background: bg
@@ -129,3 +141,7 @@ action-button(bg)
 
 .profile
   action-button: #2196F3
+  mdi-social-person()
+
+  &:hover
+    mdi-social-person-outline()
