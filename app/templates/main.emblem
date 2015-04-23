@@ -80,7 +80,7 @@ section.children
     .deal.first
       h3 экскурсии
       .image
-        img src='assets/images/pages/main/main.jpg'
+        / img src='assets/images/pages/main/main.jpg'
       p
         span В ЧЕМ ГЛАВНАЯ ПРОБЛЕМА ОБЫЧНЫХ ЭКСКУРСИЙ?
         | ЭТО СОННЫЕ ПОЕЗДКИ НА АВТОБУСЕ, МОНОТОННЫЕ РЕЧИ ЭКСКУРСОВОДА, ШАБЛОННОЕ ИЗЛОЖЕНИЕ ФАКТОВ…
