@@ -2,8 +2,8 @@ header
   .main-nav
     link-to 'main'classNames="logo"
       .emblem
-        span.first О
-        span.second О
+        span.first.icon-emblem
+        span.second.icon-emblem
       p
         span event
         | -агенство
