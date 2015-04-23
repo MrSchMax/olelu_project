@@ -3,8 +3,7 @@
 @import 'constants'
 
 box(width = nil, height = nil, align = TL)
-  display: flex
-  flex-direction: row
+  display: inline-flex
   // pos: $POS
 
   if width in $POS
@@ -50,3 +49,52 @@ box(width = nil, height = nil, align = TL)
 
   width(width)
   height(height)
+
+hbox(width = nil, height = nil, align = TL)
+  box(width, height, align)
+  flex-direction: row
+
+vbox(width = nil, height = nil, align = TL)
+  box(width, height, align)
+  flex-direction: column
+
+flex(type = row, justify = start, align = start, direction = null)
+
+  if justify == start
+    justify = flex-start
+  if justify == end
+    justify = flex-end
+  if justify == between
+    justify = space-between
+  if justify == around
+    justify = space-around
+
+  if align == start
+    align = flex-start
+  if align == end
+    align = flex-end
+
+  display: flex
+  justify-content: justify
+  align-items: align
+  if direction == reverse
+    if type == row
+      flex-direction: row-reverse
+    if type == column
+      flex-direction: column-reverse
+  else
+    flex-direction: type
+
+
+.v1
+  flex(column, direction: reverse)
+
+row(justify = start, align = start, direction = null)
+  flex(row, justify, align, direction)
+
+column(justify = start, align = start, direction = null)
+  flex(column, justify, align, direction)
+
+.v2
+  row()
+  column()

@@ -1,0 +1,148 @@
+// achieve()
+
+
+
+body
+  position: relative
+section
+  position: relative
+  width: 100%, 960px, nil
+  overflow: hidden
+  height: 700px
+
+
+  background: $c-main-white
+
+  .bg
+    absolute: top 0 left 0
+    hbox: center
+    size: 100%
+
+    img
+      width: 100%
+      min-size: 100%
+
+  .content
+    absolute: top 0 left 0
+    column: between, center
+    size: 100%
+    padding-top: 50px
+    padding-bottom: 50px
+
+
+.slider
+  background: $c-main-orange
+  height: 760px
+
+  .content
+    padding-top: 80px
+    padding-bottom: 40px
+
+  .emblem
+    vbox: center
+    text-shadow: 0px 2px 6px rgba(0,0,0,0.30)
+
+    h1
+      font-size: 64px
+      line-height: 1em
+      color: $c-main-blue
+
+      .capital
+        font-size: 96px
+        line-height: 1em
+    h2
+      font-size: 32px
+      color: $c-main-grey
+
+  .quations
+    font: normal bold 24px/32px $PTSansNarrow
+    text-transform: uppercase
+    text-align: center
+    color: $c-main-white
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.50)
+    margin-bottom: 60px
+
+    .capital
+      font-size: 36px
+
+  .slogan
+    font: 48px/1em $BaronNeue
+    color: $c-main-white
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.50)
+
+achieve(color1, color2)
+  color: color1
+
+  .circle
+    background: color1
+    color: color2
+
+
+.achievements
+  background: $c-main-white
+
+  .content
+
+    h2
+      font: normal bold 48px/1em $PTSansNarrow
+      text-transform: uppercase
+      color: $c-main-grey
+
+    .achieves
+      row: around, center
+      width: 100%
+
+      .achieve
+        column: center, center
+        text-transform: uppercase
+
+        .title
+          font: normal bold 36px/1em $PTSansNarrow
+          // color: #388E3C
+          margin-bottom: 20px
+
+        .circle
+          column: center, center
+          circle: 230px
+          // background: #388E3C
+
+          // color: $c-main-white
+
+          .number
+            font: normal bold 48px/1em $PTSansNarrow
+            margin-bottom: 10px
+
+          .text
+            font: normal normal 32px/1em $PTSansNarrow
+
+      .first
+        achieve: $c-main-green, $c-main-white
+      .second
+        achieve: $c-main-blue, $c-main-white
+      .third
+        achieve: $c-main-orange, $c-main-white
+
+    .age
+      font: normal normal 48px/1em $PTSansNarrow
+      color: $c-main-grey
+
+      span
+        color: $c-main-green
+        font-weight: bold
+
+.children
+  background: $c-secondary-white
+
+  h2
+    font-size: 48px
+    line-height: 64px
+    color: $c-main-blue
+
+    .capital
+      font-size: 64px
+    .text
+      color: $c-main-grey
+
+
+.adult
+  background: $c-secondary-black

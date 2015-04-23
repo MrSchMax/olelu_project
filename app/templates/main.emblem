@@ -1,2 +1,94 @@
-h2 Main
+section.slider
+  .bg
+    img src='assets/images/pages/main/main.jpg'
+  .content
+    .emblem
+      h1
+        span.capital.first О
+        | ле
+        span.capital  л
+        | ук
+        span.capital.second О
+        | йе
+
+      h2 чудеса там, где работает фантазия
+    .text
+      .quations
+        p
+          span.capital В
+          | ам приходилось дремать на экскурсии
+          span.capital ?
+        p
+          span.capital И
+          | ли сомневаться, как же лучше отметить важное событие
+          span.capital ?
+        p
+          span.capital К
+          | орпоративы банальны
+          span.capital ?
+        p
+          span.capital П
+          | раздники однообразны
+          span.capital ?
+
+      .slogan мы знаем, как сделать мир ярче !
+
+section.achievements
+  .content
+
+    h2 наши достижения
+
+    .achieves
+      .achieve.first
+        p.title проведено
+
+        .circle
+          p.number 20 000
+          p.text экскурсий
+
+      .achieve.second
+        p.title организовано
+
+        .circle
+          p.number 1 500
+          p.text мастер-классов
+
+      .achieve.third
+        p.title в арсенале
+
+        .circle
+          p.number 1 000 000
+          p.text идей
+
+    p.age
+      | НА РЫНКЕ ТУРИЗМА С
+      span  1982
+      |  ГОДА
+
+section.children
+  .content
+    h2.emblem
+      span.capital.first О
+      | ле
+      span.capital  л
+      | ук
+      span.capital.second О
+      | йе
+      span.text  для детей
+
+  .deals
+    .deal.first
+      h3 экскурсии
+      .image
+        img src='assets/images/pages/main/main.jpg'
+      p
+        span В ЧЕМ ГЛАВНАЯ ПРОБЛЕМА ОБЫЧНЫХ ЭКСКУРСИЙ?
+        | ЭТО СОННЫЕ ПОЕЗДКИ НА АВТОБУСЕ, МОНОТОННЫЕ РЕЧИ ЭКСКУРСОВОДА, ШАБЛОННОЕ ИЗЛОЖЕНИЕ ФАКТОВ…
+      h4 МЫ ЗНАЕМ, ЧТО ВАШ РЕБЕНОК ЗАСЛУЖИВАЕТ ЛУЧШЕГО!
+      .button
+        | перейти в каталог
+        span.mdi-hardware-keyboard-backspace
+
+section.adult
+
 == outlet

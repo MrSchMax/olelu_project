@@ -1,10 +1,12 @@
 header
-  .main-navbar
+  .main-nav
     link-to 'main'classNames="logo"
       .emblem
         span.first О
         span.second О
-      p event-агенство
+      p
+        span event
+        | -агенство
 
     nav
       link-to 'main'      | Главная
@@ -14,8 +16,8 @@ header
       link-to 'about'     | О нас
 
     .action-buttons
-      .icon.contacts
-      .icon.cart
-      .icon.profile
+      .button.contacts.mdi-communication-phone
+      .button.cart.mdi-action-shopping-cart
+      .button.profile.mdi-social-person
 
 == outlet
