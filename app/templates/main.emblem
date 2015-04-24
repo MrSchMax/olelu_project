@@ -66,28 +66,28 @@ section.achievements
       |  ГОДА
 
 section.children
-  .content
-    h2.emblem
-      span.capital.first О
-      | ле
-      span.capital  л
-      | ук
-      span.capital.second О
-      | йе
-      span.text  для детей
-
-  .deals
-    .deal.first
-      h3 экскурсии
-      .image
-        / img src='assets/images/pages/main/main.jpg'
-      p
-        span В ЧЕМ ГЛАВНАЯ ПРОБЛЕМА ОБЫЧНЫХ ЭКСКУРСИЙ?
-        | ЭТО СОННЫЕ ПОЕЗДКИ НА АВТОБУСЕ, МОНОТОННЫЕ РЕЧИ ЭКСКУРСОВОДА, ШАБЛОННОЕ ИЗЛОЖЕНИЕ ФАКТОВ…
-      h4 МЫ ЗНАЕМ, ЧТО ВАШ РЕБЕНОК ЗАСЛУЖИВАЕТ ЛУЧШЕГО!
-      .button
-        | перейти в каталог
-        span.mdi-hardware-keyboard-backspace
+  / .content
+  /   h2.emblem
+  /     span.capital.first О
+  /     | ле
+  /     span.capital  л
+  /     | ук
+  /     span.capital.second О
+  /     | йе
+  /     span.text  для детей
+  /
+  / .deals
+  /   .deal.first
+  /     h3 экскурсии
+  /     .image
+  /       / img src='assets/images/pages/main/main.jpg'
+  /     p
+  /       span В ЧЕМ ГЛАВНАЯ ПРОБЛЕМА ОБЫЧНЫХ ЭКСКУРСИЙ?
+  /       | ЭТО СОННЫЕ ПОЕЗДКИ НА АВТОБУСЕ, МОНОТОННЫЕ РЕЧИ ЭКСКУРСОВОДА, ШАБЛОННОЕ ИЗЛОЖЕНИЕ ФАКТОВ…
+  /     h4 МЫ ЗНАЕМ, ЧТО ВАШ РЕБЕНОК ЗАСЛУЖИВАЕТ ЛУЧШЕГО!
+  /     .button
+  /       | перейти в каталог
+  /       span.mdi-hardware-keyboard-backspace
 
 section.adult
 

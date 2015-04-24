@@ -1,10 +1,9 @@
 @import 'width'
 @import 'height'
 @import 'constants'
+@import 'flex'
 
 box(width = nil, height = nil, align = TL)
-  display: inline-flex
-  // pos: $POS
 
   if width in $POS
     align = width
@@ -12,41 +11,42 @@ box(width = nil, height = nil, align = TL)
 
 
   if align in $POS-TL
-    justify-content: flex-start
-    align-items: flex-start
+    flex-justify: flex-start
+    flex-align: flex-start
 
   if align in $POS-TC
-    justify-content: center
-    align-items: flex-start
+    flex-justify: center
+    flex-align: flex-start
 
   if align in $POS-TR
-    justify-content: flex-end
-    align-items: flex-start
+    flex-justify: flex-end
+    flex-align: flex-start
 
   if align in $POS-LC
-    justify-content: flex-start
-    align-items: center
+    flex-justify: flex-start
+    flex-align: center
 
   if align in $POS-CC
-    justify-content: center
-    align-items: center
+    flex-justify: center
+    flex-align: center
 
   if align in $POS-RC
-    justify-content: flex-end
-    align-items: center
+    flex-justify: flex-end
+    flex-align: center
 
   if align in $POS-BL
-    justify-content: flex-start
-    align-items: flex-end
+    flex-justify: flex-start
+    flex-align: flex-end
 
   if align in $POS-BC
-    justify-content: center
-    align-items: flex-end
+    flex-justify: center
+    flex-align: flex-end
 
   if align in $POS-BR
-    justify-content: flex-end
-    align-items: flex-end
+    flex-justify: flex-end
+    flex-align: flex-end
 
+  flexbox(inline-flex)
   width(width)
   height(height)
 
@@ -74,9 +74,9 @@ flex(type = row, justify = start, align = start, direction = null)
   if align == end
     align = flex-end
 
-  display: flex
-  justify-content: justify
-  align-items: align
+  flexbox(flex)
+  flex-justify(justify)
+  flex-align: align
   if direction == reverse
     if type == row
       flex-direction: row-reverse
@@ -84,6 +84,89 @@ flex(type = row, justify = start, align = start, direction = null)
       flex-direction: column-reverse
   else
     flex-direction: type
+
+// box(width = nil, height = nil, align = TL)
+//   display: inline-flex
+//   // pos: $POS
+//
+//   if width in $POS
+//     align = width
+//     width = nil
+//
+//
+//   if align in $POS-TL
+//     flex-justify: flex-start
+//     align-items: flex-start
+//
+//   if align in $POS-TC
+//     justify-content: center
+//     align-items: flex-start
+//
+//   if align in $POS-TR
+//     justify-content: flex-end
+//     align-items: flex-start
+//
+//   if align in $POS-LC
+//     justify-content: flex-start
+//     align-items: center
+//
+//   if align in $POS-CC
+//     justify-content: center
+//     align-items: center
+//
+//   if align in $POS-RC
+//     justify-content: flex-end
+//     align-items: center
+//
+//   if align in $POS-BL
+//     justify-content: flex-start
+//     align-items: flex-end
+//
+//   if align in $POS-BC
+//     justify-content: center
+//     align-items: flex-end
+//
+//   if align in $POS-BR
+//     justify-content: flex-end
+//     align-items: flex-end
+//
+//   width(width)
+//   height(height)
+//
+// hbox(width = nil, height = nil, align = TL)
+//   box(width, height, align)
+//   flex-direction: row
+//
+// vbox(width = nil, height = nil, align = TL)
+//   box(width, height, align)
+//   flex-direction: column
+//
+// flex(type = row, justify = start, align = start, direction = null)
+//
+//   if justify == start
+//     justify = flex-start
+//   if justify == end
+//     justify = flex-end
+//   if justify == between
+//     justify = space-between
+//   if justify == around
+//     justify = space-around
+//
+//   if align == start
+//     align = flex-start
+//   if align == end
+//     align = flex-end
+//
+//   display: flex
+//   justify-content: justify
+//   align-items: align
+//   if direction == reverse
+//     if type == row
+//       flex-direction: row-reverse
+//     if type == column
+//       flex-direction: column-reverse
+//   else
+//     flex-direction: type
 
 
 .v1
