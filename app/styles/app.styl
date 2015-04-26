@@ -15,6 +15,7 @@ $c-main-black = #212121
 $c-main-grey = #545454
 $c-secondary-black = #212325
 $c-secondary-white = #EEEEEE
+$c-another-white = #E1E1E1
 
 circle(dia)
   width: dia
@@ -35,8 +36,10 @@ button($size, $color1, $color2)
     background: darken($color1, 20%)
     color: $color2
 
-// body
-//   line-height: 1
+rotate-elem(value)
+  -webkit-transform: rotate(value)
+  -ms-transform: rotate(value)
+  transform: rotate(value)
 
 a
   display: block
@@ -46,16 +49,18 @@ a
   &:active, &:focus
     outline: none;
 
-.emblem
-  font-family: $BaronNeue
-  font-weight: normal
-  line-height: 1
-
-  .first
-    color: $c-main-green
-
-  .second
-    color: $c-main-orange
+// .emblem
+//   font-family: $BaronNeue
+//   font-weight: normal
+//   line-height: 1
+//
+//   .first
+//     color: $c-main-green
+//
+//   .second
+//     color: $c-main-orange
 
 @import 'header'
-@import 'main'
+@import 'typography'
+@import 'pages/main/layout'
+@import 'pages/main/decoration'

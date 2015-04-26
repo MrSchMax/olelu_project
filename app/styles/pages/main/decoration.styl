@@ -1,0 +1,78 @@
+.emblem
+  color: $c-main-blue
+.slider
+  .emblem
+  .slogan
+    text-shadow: 0px 2px 6px rgba(0,0,0,0.30)
+  .slogan
+    color: $c-main-grey
+  .quations, .solution
+    color: $c-main-white
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.50)
+
+achieve(color1, color2)
+  color: color1
+
+  .circle
+    border-radius: 100%
+    background: color1
+    color: color2
+
+.achievements
+  background: $c-main-white
+
+  h2
+    color: $c-main-grey
+    span
+      color: $c-main-green
+
+  .first
+    achieve: $c-main-green, $c-main-white
+  .second
+    achieve: $c-main-blue, $c-main-white
+  .third
+    achieve: $c-main-orange, $c-main-white
+
+text-button(bg, text)
+  .text-button:hover
+    border-color: transparent
+    background: bg
+    color: text
+
+  .text-button:active
+    background: darken(bg, 20%)
+    color: text
+.children, .adult
+
+  .first
+    h3, h4
+      color: $c-main-green
+  .second
+    h3, h4
+      color: $c-main-blue
+  .third
+    h3, h4
+      color: $c-main-orange
+  .text-button
+    border: 1px solid
+    border-radius: 40px
+
+
+.children
+  background: $c-secondary-white
+  text-button: $c-main-grey, $c-main-white
+  .image
+    border: 1px solid $c-another-white
+  p, .text-button
+    color: $c-secondary-black
+  .text-button
+    border-color: $c-secondary-black
+.adult
+  background: $c-secondary-black
+  text-button: $c-main-white, $c-main-grey
+  .image
+    border: 1px solid $c-main-black
+  p, .text-button
+    color: $c-main-white
+  .text-button
+    border-color: $c-main-white

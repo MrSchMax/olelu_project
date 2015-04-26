@@ -1,6 +1,6 @@
 header
   .main-nav
-    link-to 'main'classNames="logo"
+    link-to 'main' classNames="logo"
       .emblem
         span.first.icon-emblem
         span.second.icon-emblem
@@ -16,8 +16,8 @@ header
       link-to 'about'     | О нас
 
     .action-buttons
-      .button.contacts.mdi-communication-phone
-      .button.cart.mdi-action-shopping-cart
-      .button.profile.mdi-social-person
+      .button.contacts.mdi-communication-phone.f24px
+      .button.cart.mdi-action-shopping-cart.f24px
+      .button.profile.mdi-social-person.f24px
 
 == outlet

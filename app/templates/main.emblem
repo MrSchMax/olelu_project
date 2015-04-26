@@ -2,93 +2,164 @@ section.slider
   .bg
     img src='assets/images/pages/main/main.jpg'
   .content
-    .emblem
-      h1
-        span.capital.first О
+    div
+      h1.emblem.logo-font.f64px.text-center
+        span.first.f96px О
         | ле
-        span.capital  л
+        span.f96px  л
         | ук
-        span.capital.second О
+        span.second.f96px.second О
         | йе
 
-      h2 чудеса там, где работает фантазия
-    .text
-      .quations
-        p
-          span.capital В
-          | ам приходилось дремать на экскурсии
-          span.capital ?
-        p
-          span.capital И
-          | ли сомневаться, как же лучше отметить важное событие
-          span.capital ?
-        p
-          span.capital К
-          | орпоративы банальны
-          span.capital ?
-        p
-          span.capital П
-          | раздники однообразны
-          span.capital ?
+      h2.slogan.logo-font.downcase.f32px.text-center чудеса там, где работает фантазия
 
-      .slogan мы знаем, как сделать мир ярче !
+    div
+      .quations.bold.uppercase.f24px-32px.text-center
+        p
+          span.f36px В
+          | ам приходилось дремать на экскурсии
+          span.f36px ?
+        p
+          span.f36px И
+          | ли сомневаться, как же лучше отметить важное событие
+          span.f36px ?
+        p
+          span.f36px К
+          | орпоративы банальны
+          span.f36px ?
+        p
+          span.f36px П
+          | раздники однообразны
+          span.f36px ?
+
+      .solution.logo-font.downcase.f48px.text-center Мы знаем, как сделать мир ярче !
 
 section.achievements
-  .content
+  .content.text-center.uppercase
 
-    h2 наши достижения
+    h2.bold.uppercase.f48px наши достижения
 
     .achieves
       .achieve.first
-        p.title проведено
+        p.bold.f36px проведено
 
         .circle
-          p.number 20 000
-          p.text экскурсий
+          p.number.bold.f48px 20 000
+          p.text.f32px экскурсий
 
       .achieve.second
-        p.title организовано
+        p.bold.f36px организовано
 
         .circle
-          p.number 1 500
-          p.text мастер-классов
+          p.number.bold.f48px 1 500
+          p.text.f32px мастер-классов
 
       .achieve.third
-        p.title в арсенале
+        p.bold.f36px в арсенале
 
         .circle
-          p.number 1 000 000
-          p.text идей
+          p.number.bold.f48px 1 000 000
+          p.text.f32px идей
 
-    p.age
-      | НА РЫНКЕ ТУРИЗМА С
-      span  1982
-      |  ГОДА
+    h2.f48px
+      | На рынке туризма с
+      span.bold  1982
+      |  года
 
 section.children
-  / .content
-  /   h2.emblem
-  /     span.capital.first О
-  /     | ле
-  /     span.capital  л
-  /     | ук
-  /     span.capital.second О
-  /     | йе
-  /     span.text  для детей
-  /
-  / .deals
-  /   .deal.first
-  /     h3 экскурсии
-  /     .image
-  /       / img src='assets/images/pages/main/main.jpg'
-  /     p
-  /       span В ЧЕМ ГЛАВНАЯ ПРОБЛЕМА ОБЫЧНЫХ ЭКСКУРСИЙ?
-  /       | ЭТО СОННЫЕ ПОЕЗДКИ НА АВТОБУСЕ, МОНОТОННЫЕ РЕЧИ ЭКСКУРСОВОДА, ШАБЛОННОЕ ИЗЛОЖЕНИЕ ФАКТОВ…
-  /     h4 МЫ ЗНАЕМ, ЧТО ВАШ РЕБЕНОК ЗАСЛУЖИВАЕТ ЛУЧШЕГО!
-  /     .button
-  /       | перейти в каталог
-  /       span.mdi-hardware-keyboard-backspace
+  .content.text-center
+    h2.emblem.logo-font.f48px-64px
+      span.first.f64px О
+      | ле
+      span.f64px  л
+      | ук
+      span.second.f64px О
+      | йе
+      span.text  для детей
+
+    .deals.uppercase
+      .deal.first
+        h3.bold.f36px экскурсии
+        div
+          .image
+            img src='assets/images/pages/main/children-tours.jpg'
+
+          .text.f15px-19px
+            p.bold В чем главная проблема обычных экскурсий?
+            p Это сонные поездки на автобусе, монотонные речи экскурсовода, шаблонное изложение фактов…
+
+          h4.bold.f18px-23px Мы знаем, что ваш ребенок заслуживает лучшего!
+        link-to 'tours' classNames="text-button f18"
+          | перейти в каталог
+          span.mdi-action-trending-neutral
+      .deal.second
+        h3.bold.f36px мастер-классы
+        div
+          .image
+            img src='assets/images/pages/main/children-trainings.jpg'
+
+          .text.f15px-19px
+            p многие пишут, что любовь и привычка к труду определяют будущее маленького человека,
+            p.bold но как пробудить их в своем ребенке?
+
+
+          h4.bold.f18px-23px способствуем разностороннему развитию ваших детей
+        link-to 'trainings' classNames="text-button f18"
+          | перейти в каталог
+          span.mdi-action-trending-neutral
+      .deal.third
+        h3.bold.f36px праздники
+        div
+          .image
+            img src='assets/images/pages/main/children-events.jpg'
+
+          .text.f15px-19px
+            p.bold порадовать свое чадо в значимый день хочется всегда, —
+            p но вот сил и времени порой не хватает…
+
+          h4.bold.f18px-23px не стоит терзать себя, позовите «оле-лукойе»!
+        link-to 'events' classNames="text-button f18"
+          | перейти в каталог
+          span.mdi-action-trending-neutral
 
 section.adult
+  .content.text-center
+    h2.emblem.logo-font.f48px-64px
+      span.first.f64px О
+      | ле
+      span.f64px  л
+      | ук
+      span.second.f64px О
+      | йе
+      span.text  для взрослых
+
+    .deals.uppercase
+      .deal.first
+        h3.bold.f36px экскурсии
+        div
+          .image
+            img src='assets/images/pages/main/adult-tours.jpg'
+
+          .text.f18px-23px
+            p.bold вы же знаете, насколько важен стиль подачи информации? и мы знаем!
+
+          h4.bold.f18px-23px убедитесь сами!
+        link-to 'tours' classNames="text-button f18"
+          | перейти в каталог
+          span.mdi-action-trending-neutral
+      .deal.third
+        h3.bold.f36px праздники
+        div
+          .image
+            img src='assets/images/pages/main/adult-events.jpg'
+
+          .text.f18px-23px
+            p.bold свадьба, корпоратив, день рождения и любое другое событие должны быть идеальными!
+
+
+          h4.bold.f18px-23px один звонок нам — и будут!
+        link-to 'events' classNames="text-button f18"
+          | перейти в каталог
+          span.mdi-action-trending-neutral
 
 == outlet

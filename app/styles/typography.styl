@@ -1,0 +1,51 @@
+PTSansNarrow = 'PT Sans Narrow', 'Arial'
+BaronNeue = 'Baron Neue', 'Arial'
+
+font-size(size, line = 1)
+  if line == 1
+    .f{size}px
+      font-size: size
+      line-height: line
+  else
+    .f{size}px-{line}px
+      font-size: size
+      line-height: line
+
+.bold
+  font-weight: bold
+
+.uppercase
+  text-transform: uppercase
+.downcase
+  text-transform: lowercase
+
+.text-right
+  text-align: right
+.text-left
+  text-align: left
+.text-center
+  text-align: center
+.text-justify
+  text-align: justify
+
+.logo-font
+  font-family: BaronNeue
+
+html
+  font: normal normal 16px/1 PTSansNarrow
+p, span
+  font-weight: inherit
+  text-align: inherit
+  font-size: inherit
+
+font-size(15px, 19px)
+font-size(18px)
+font-size(18px, 23px)
+font-size(24px)
+font-size(24px, 32px)
+font-size(32px)
+font-size(36px)
+font-size(48px)
+font-size(48px, 64px)
+font-size(64px)
+font-size(96px)
