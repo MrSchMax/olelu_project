@@ -1,2 +1,35 @@
-h2 Tours
+section.slider
+  .bg
+    img src='assets/images/pages/tours/main.jpg'
+
+  .content
+    h1.emblem.logo-font.f48px-64px
+      span.text
+        span.f64px э
+        | кскурсии с
+      span.first.f64px  О
+      | ле
+      span.f64px  л
+      | ук
+      span.second.f64px О
+      | йе
+      span.text
+        |  это
+        span :
+    .advantages.f18px.uppercase.bold.text-center
+      .item.item1
+        .icon
+          .mdi-maps-local-library.f96px
+        p.bold УНИКАЛЬНЫЕ ТЕМАТИЧЕСКИЕ РАЗРАБОТКИ ЭКСКУРСИЙ
+        p.bold МАРШРУТЫ ПРОДУМАННЫЕ ДО МЕЛОЧЕЙ
+      .item.item2
+        .icon
+          .mdi-social-group.f96px
+        p.bold ЯРКИЕ КРЕАТИВНЫЕ МОЛОДЫЕ ЭКСКУРСОВОДЫ
+        p.bold ПРОФЕССИОНАЛЬНЫЕ РУССКИЕ ВОДИТЕЛИ
+      .item.item3
+        .icon
+          .mdi-action-thumb-up.f96px
+        p.bold КОМФОРТНЫЕ БЕЗОПАСНЫЕ АВТОБУСЫ БИЗНЕС-КЛАССА
+        p.bold ОТЕЛИ ВЫСОКОГО КЛАССА
 == outlet

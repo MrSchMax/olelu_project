@@ -1,2 +1,72 @@
-h2 Events
+section.slider
+  .bg
+    img src='assets/images/pages/events/main.jpg'
+  .content
+    div.logo-font
+      h1.f64px.text-center 70 лет Победы!
+      h2.f20px Уникальное военное квест-приключение для школьников любого возраста!
+    .center
+      .list.f22px-30px.uppercase
+        / h3.f36px.bold ребят ждёт:
+        ul
+          li увлекательная интерактивная экскурсия в автобусе
+          li обмундирование (пилотки, ремни 1941 г.)
+          li марш-бросок
+          li захватывающий квест на территории военно-исторического клуба
+          li стрельба из пистолета
+          li познавательные конкурсы в блиндаже
+          li настоящая солдатская каша  с горячим чаем
+          li на обратном пути в автобусе – тематический мастер-класс!
+          li закончится военное путешествие посадкой дерева памяти.
+      .info.uppercase
+        .item
+          .icon.mdi-action-event.f32px
+          p.f18px
+            | с
+            span.f24px  15
+            |  апреля по
+            span.f24px  30
+            |  мая
+        .item
+          .icon.mdi-action-query-builder.f32px
+          p.f18px
+            | около
+            span.f24px  7
+            |  часов
+        .item
+          .icon.mdi-social-group.f32px
+          p.f18px
+            | для школьников
+        .item
+          .icon.mdi-action-accessibility.f32px
+          p.f18px
+            | до
+            span.f24px  40
+            |  человек
+        .item
+          .icon.mdi-maps-local-atm.f32px
+          p.f18px
+            | от
+            span.f24px  1850
+            |  руб./чел.
+    .results.text-center.f24px.uppercase.bold
+      p.bold Приняв участие в программе, школьники:
+      ol.f18px
+        li Узнают много интересного и неожиданного для себя о войне
+        li Погрузившись в атмосферу военного времени, испытают себя в роли рядового солдата
+        li Поймут, что 9 Мая – Великий Праздник Нашего Народа
+
+    div.f24px-32px.text-center
+      h4.bold Заявки на участие в программе принимаются по телефонам:
+      p.phones +7 499 401 59 01   +7 926 818 48 04   +7 916 384 30 49
+      p.email
+        span.bold email:
+        |  info@olelu.ru
+
+
+
+
+
+
+
 == outlet

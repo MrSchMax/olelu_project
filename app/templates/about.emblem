@@ -1,2 +1,68 @@
-h2 About
+section.slider
+  .bg
+    img src='assets/images/pages/about/main.jpg'
+
+  .content
+    div
+      h1.emblem.logo-font.f64px.text-center
+        span.first.f96px О
+        | ле
+        span.f96px  л
+        | ук
+        span.second.f96px.second О
+        | йе
+
+      h2.slogan.logo-font.downcase.f32px.text-center
+        | проект, рожденный в далеком
+        span.f48px  1982
+        |  году
+    p.first.bold.uppercase.f30px.text-center за эти годы мы выросли из простой туристической компании в опытное event-агентство с универсальным набором услуг:
+
+    ul.f24px-32px.uppercase.text-center
+      li российские и зарубежные экскурсии с уникальными программами,
+      li необычные мастер-классы,
+      li любые праздники для взрослых и детей
+
+    p.second.bold.uppercase.f30px.text-center каждый раз оригинально и в интерактивной форме.
+
+    .solution.logo-font.downcase.f36px.text-center мы — команда энтузиастов, способных превратить любое событие в чудо! 
+
+section.why
+  .content.text-center.uppercase
+
+    h2.bold.uppercase.f48px почему именно мы?
+
+    .list-item.text-left
+      .number.f36px 1
+      p.f24px уникальная разработка путевой информации, адаптированного под любой возраст — от малышей детского сада до самых искушенных экскурсантов
+    .list-item.text-left
+      .number.f36px 2
+      p.f24px Автобусные экскурсии проводятся исключительно в интерактивной форме.
+    .list-item.text-left
+      .number.f36px 3
+      p.f24px Наши экскурсоводы не только талантливые рассказчики, но еще аниматоры и ведущие мастер-классов. Мы делаем поездку в автобусе праздником для всех!
+    .list-item.text-left
+      .number.f36px 4
+      p.f24px Оригинальные и познавательные выездные мастер-классы всесторонне развивают вашего ребенка в атмосфере игры и веселья.
+    .list-item.text-left
+      .number.f36px 5
+      p.f24px У нас нет привычных шаблонных сценариев. Каждый из них разрабатывается индивидуально под конкретный случай торжества.
+    .list-item.text-left
+      .number.f36px 6
+      p.f24px При вашем желании берем на себя оформление  документов для выездов школьных групп на экскурсии (оформление в ГОРОНО,  ГИБДД и др.)
+
+/ section.contacts
+/   .content.text-center.uppercase
+/
+/     h2.bold.uppercase.f48px контакты
+/
+/     .phones
+/       p +7 499 401 59 01
+/       p +7 926 818 48 04
+/       p +7 916 384 30 49
+/
+/     p.email
+/       span.bold email:
+/       |  info@olelu.ru
+
 == outlet

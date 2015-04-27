@@ -8,8 +8,11 @@ $BaronNeue = 'Baron Neue', 'Arial'
 $PTSansNarrow = 'PT Sans Narrow', 'Arial'
 
 $c-main-blue = #1976D2
+$c-secondary-blue = #24B8F8
 $c-main-green = #388E3C
+$c-secondary-green = #50CC56
 $c-main-orange = #E64A19
+$c-secondary-orange = #FF5722
 $c-main-white = #F7F7F7
 $c-main-black = #212121
 $c-main-grey = #545454
@@ -49,18 +52,29 @@ a
   &:active, &:focus
     outline: none;
 
-// .emblem
-//   font-family: $BaronNeue
-//   font-weight: normal
-//   line-height: 1
-//
-//   .first
-//     color: $c-main-green
-//
-//   .second
-//     color: $c-main-orange
+.emblem
+  font-family: $BaronNeue
+  font-weight: normal
+  line-height: 1
+
+  .first
+    color: $c-main-green
+
+  .second
+    color: $c-main-orange
+
+html
+  size: 100%
+body
+  size: 100%
 
 @import 'header'
 @import 'typography'
 @import 'pages/main/layout'
+@import 'pages/events/layout'
+@import 'pages/events/decoration'
 @import 'pages/main/decoration'
+@import 'pages/about/decoration'
+@import 'pages/about/layout'
+@import 'pages/tours/layout'
+@import 'pages/tours/decoration'

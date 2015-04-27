@@ -15,9 +15,14 @@ header
       link-to 'events'    | Праздники
       link-to 'about'     | О нас
 
-    .action-buttons
-      .button.contacts.mdi-communication-phone.f24px
-      .button.cart.mdi-action-shopping-cart.f24px
-      .button.profile.mdi-social-person.f24px
+    / .action-buttons
+    /   .button.contacts.mdi-communication-phone.f24px
+    /   .button.cart.mdi-action-shopping-cart.f24px
+    /   .button.profile.mdi-social-person.f24px
+    .contacts
+      .icon.mdi-communication-phone.f22px
+      .phones
+        p.first.f20px +7 499 401 59 01
+        p.second.f20px +7 926 818 48 04
 
 == outlet
